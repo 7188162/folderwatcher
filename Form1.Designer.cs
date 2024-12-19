@@ -45,10 +45,28 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnBrowseApp = new System.Windows.Forms.Button();
+            this.txtAppPath = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.chkTriggerApp = new System.Windows.Forms.CheckBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.btnBrowseLog = new System.Windows.Forms.Button();
+            this.txtLogPath = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.chkLog = new System.Windows.Forms.CheckBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.triggerWhen = new System.Windows.Forms.CheckedListBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -118,7 +136,7 @@
             this.btnBrowse.Name = "btnBrowse";
             this.btnBrowse.Size = new System.Drawing.Size(75, 23);
             this.btnBrowse.TabIndex = 3;
-            this.btnBrowse.Text = "&Browse";
+            this.btnBrowse.Text = "&Browse...";
             this.btnBrowse.UseVisualStyleBackColor = true;
             this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
@@ -134,7 +152,7 @@
             this.groupBox3.Controls.Add(this.chkShowCreated);
             this.groupBox3.Controls.Add(this.chkAutostart);
             this.groupBox3.Controls.Add(this.chkSuppressBalloon);
-            this.groupBox3.Location = new System.Drawing.Point(29, 248);
+            this.groupBox3.Location = new System.Drawing.Point(29, 471);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(362, 79);
             this.groupBox3.TabIndex = 7;
@@ -168,7 +186,7 @@
             this.chkSuppressBalloon.Name = "chkSuppressBalloon";
             this.chkSuppressBalloon.Size = new System.Drawing.Size(113, 16);
             this.chkSuppressBalloon.TabIndex = 0;
-            this.chkSuppressBalloon.Text = "Suppress Balloon";
+            this.chkSuppressBalloon.Text = "S&uppress Balloon";
             this.chkSuppressBalloon.UseVisualStyleBackColor = true;
             // 
             // contextMenuStrip1
@@ -193,11 +211,164 @@
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.textBox1);
+            this.groupBox4.Controls.Add(this.label4);
+            this.groupBox4.Controls.Add(this.groupBox6);
+            this.groupBox4.Controls.Add(this.btnBrowseApp);
+            this.groupBox4.Controls.Add(this.txtAppPath);
+            this.groupBox4.Controls.Add(this.label3);
+            this.groupBox4.Controls.Add(this.chkTriggerApp);
+            this.groupBox4.Location = new System.Drawing.Point(29, 225);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(362, 145);
+            this.groupBox4.TabIndex = 8;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Trigger Other App";
+            // 
+            // btnBrowseApp
+            // 
+            this.btnBrowseApp.Location = new System.Drawing.Point(272, 41);
+            this.btnBrowseApp.Name = "btnBrowseApp";
+            this.btnBrowseApp.Size = new System.Drawing.Size(75, 23);
+            this.btnBrowseApp.TabIndex = 7;
+            this.btnBrowseApp.Text = "B&rowse...";
+            this.btnBrowseApp.UseVisualStyleBackColor = true;
+            this.btnBrowseApp.Click += new System.EventHandler(this.btnBrowseApp_Click);
+            // 
+            // txtAppPath
+            // 
+            this.txtAppPath.Location = new System.Drawing.Point(58, 45);
+            this.txtAppPath.Name = "txtAppPath";
+            this.txtAppPath.Size = new System.Drawing.Size(208, 19);
+            this.txtAppPath.TabIndex = 6;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(22, 48);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(30, 12);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Path:";
+            // 
+            // chkTriggerApp
+            // 
+            this.chkTriggerApp.AutoSize = true;
+            this.chkTriggerApp.Location = new System.Drawing.Point(15, 18);
+            this.chkTriggerApp.Name = "chkTriggerApp";
+            this.chkTriggerApp.Size = new System.Drawing.Size(116, 16);
+            this.chkTriggerApp.TabIndex = 4;
+            this.chkTriggerApp.Text = "Trigger Other App";
+            this.chkTriggerApp.UseVisualStyleBackColor = true;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.btnBrowseLog);
+            this.groupBox5.Controls.Add(this.txtLogPath);
+            this.groupBox5.Controls.Add(this.label2);
+            this.groupBox5.Controls.Add(this.chkLog);
+            this.groupBox5.Location = new System.Drawing.Point(29, 376);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(362, 89);
+            this.groupBox5.TabIndex = 0;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Log";
+            // 
+            // btnBrowseLog
+            // 
+            this.btnBrowseLog.Location = new System.Drawing.Point(272, 45);
+            this.btnBrowseLog.Name = "btnBrowseLog";
+            this.btnBrowseLog.Size = new System.Drawing.Size(75, 23);
+            this.btnBrowseLog.TabIndex = 7;
+            this.btnBrowseLog.Text = "Br&owse...";
+            this.btnBrowseLog.UseVisualStyleBackColor = true;
+            this.btnBrowseLog.Click += new System.EventHandler(this.btnBrowseLog_Click);
+            // 
+            // txtLogPath
+            // 
+            this.txtLogPath.Location = new System.Drawing.Point(58, 49);
+            this.txtLogPath.Name = "txtLogPath";
+            this.txtLogPath.Size = new System.Drawing.Size(208, 19);
+            this.txtLogPath.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(22, 52);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(30, 12);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Path:";
+            // 
+            // chkLog
+            // 
+            this.chkLog.AutoSize = true;
+            this.chkLog.Location = new System.Drawing.Point(15, 20);
+            this.chkLog.Name = "chkLog";
+            this.chkLog.Size = new System.Drawing.Size(42, 16);
+            this.chkLog.TabIndex = 4;
+            this.chkLog.Text = "Log";
+            this.chkLog.UseVisualStyleBackColor = true;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.triggerWhen);
+            this.groupBox6.Controls.Add(this.checkBox1);
+            this.groupBox6.Location = new System.Drawing.Point(15, 96);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(332, 43);
+            this.groupBox6.TabIndex = 8;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Trigger when...";
+            this.groupBox6.Visible = false;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(6, 29);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(80, 16);
+            this.checkBox1.TabIndex = 0;
+            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // triggerWhen
+            // 
+            this.triggerWhen.FormattingEnabled = true;
+            this.triggerWhen.Location = new System.Drawing.Point(3, 15);
+            this.triggerWhen.MultiColumn = true;
+            this.triggerWhen.Name = "triggerWhen";
+            this.triggerWhen.Size = new System.Drawing.Size(323, 32);
+            this.triggerWhen.TabIndex = 1;
+            this.triggerWhen.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(23, 71);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(29, 12);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "args:";
+            this.label4.Visible = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(58, 68);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(208, 19);
+            this.textBox1.TabIndex = 10;
+            this.textBox1.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(416, 364);
+            this.ClientSize = new System.Drawing.Size(416, 562);
+            this.Controls.Add(this.groupBox5);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
@@ -216,6 +387,12 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.contextMenuStrip1.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -237,6 +414,21 @@
         private System.Windows.Forms.CheckBox chkAutostart;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.CheckBox chkShowCreated;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Button btnBrowseApp;
+        private System.Windows.Forms.TextBox txtAppPath;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckBox chkTriggerApp;
+        private System.Windows.Forms.Button btnBrowseLog;
+        private System.Windows.Forms.TextBox txtLogPath;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckBox chkLog;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.CheckedListBox triggerWhen;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label4;
     }
 }
 
